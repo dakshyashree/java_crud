@@ -45,19 +45,24 @@ class CRUDemo{
                     String ename = sc1.nextLine();
                     System.out.print("Enter Salary:");
                     int salary = sc.nextInt();
-                    c.add(new Employee(eno,ename,salary));
+                    c.add(new Employee(emo,ename,salary));
                     break;
                 case 2:
                     System.out.println("---------------------------------------");
-                    Iterator i =c.iterator();
-                    while(i.hasNext()){
-                        Employee e = i.next();
+                    for (Employee e : c) {
                         System.out.println(e);
                     }
                     System.out.println("---------------------------------------");
                     break;
                 case 3:
-
+                    boolean found =false;
+                    System.out.println("Enter the Employee no to search:");
+                    
+                    System.out.println("---------------------------------------");
+                    for (Employee e : c) {
+                        System.out.println(e);
+                    }
+                    System.out.println("---------------------------------------");
                     break;
             }
         }while(ch!=0);
